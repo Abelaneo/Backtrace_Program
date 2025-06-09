@@ -31,6 +31,3 @@ Building:
 The supplied Makefile will correctly build the program with these commands:
 # Build static library lib/libdebug.a
 make       
-
-# Clean all "building" files
-make clean
