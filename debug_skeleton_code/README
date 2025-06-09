@@ -19,7 +19,7 @@ Directory Layout:
 |   ├── asm/
 │      ├── dump_regs.s     # Assembly for dump_registers
 │      └── backtrace.s     # Assembly for dump_backtrace frame walk
-│   └── debug.c             # C helpers that wrap printf & dladdr
+│   └── debug.c            # C helpers that wrap printf & dladdr
 ├── test/
 │   └── main.c             # Example driver (used for grading)
 ├── lib/                   # (Left empty – `make` builds here)
