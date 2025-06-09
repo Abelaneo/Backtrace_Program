@@ -1,3 +1,35 @@
-TODO
+x86-64 Stack Backtrace & Register-Dump Library
+Course / Assignment – CS271, Debugging: Walking the Stack (Final Project)
+Author – Oscar Abelanet
 
-Write a readme describing your project. Find an open source project on github for inspiration.
+
+Project Overview:
+This library provides two debugging functions implemented partly in C and partly in x86-64 assembly:
+
+Functions
+void dump_registers(void):	Prints the contents of the integer general-purpose registers (rax, rbx, …, r15) in decimal and hexadecimal.
+void dump_backtrace(void):	Walks the frame-pointer chain (rbp) to print a symbolic stack backtrace using dladdr for symbol resolution.
+
+
+Directory Layout:
+.
+├── include/
+│   └── debug.h            # Public interface
+├── src/
+│   ├── dump_regs.s        # Assembly for dump_registers
+│   ├── backtrace.s        # Assembly for dump_backtrace frame walk
+│   └── util.c             # C helpers that wrap printf & dladdr
+├── test/
+│   └── main.c             # Example driver (used for grading)
+├── lib/                   # (Left empty – `make` builds here)
+├── README.md              # This file
+└── Makefile               # Build script (provided)
+
+
+Building:
+The supplied Makefile will correctly build the program with these commands:
+# Build static library lib/libdebug.a
+make       
+
+# Clean all "building" files
+make clean
