@@ -17,8 +17,8 @@ Directory Layout:
 │   └── debug.h            # Public interface
 ├── src/
 |   ├── asm/
-│      ├── dump_regs.s        # Assembly for dump_registers
-│      └── backtrace.s        # Assembly for dump_backtrace frame walk
+│      ├── dump_regs.s     # Assembly for dump_registers
+│      └── backtrace.s     # Assembly for dump_backtrace frame walk
 │   └── util.c             # C helpers that wrap printf & dladdr
 ├── test/
 │   └── main.c             # Example driver (used for grading)
